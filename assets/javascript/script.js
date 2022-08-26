@@ -1,4 +1,16 @@
 
+var search = function (event) {
+    event.preventDefault();
+    var city = document.querySelector(".userInput")
+    var cityName = city.value;
+  
+    if (cityName) {
+      todaysWeather(cityName);
+  
+    } else {
+      alert('Please enter a valid City Name');
+    }
+  };
 
 
 
@@ -8,7 +20,7 @@ var todaysWeather = function (city) {
         .then(function (res) {
             if (res.ok) {
                 res.json().then(function (data) {
-                    // function for displaying (data)
+                    showCurrent(data)
                 })
             } else {
                 alert("Error, weather not found")
@@ -30,3 +42,16 @@ var fiveDayWeather = function (city) {
             }
         })
 }
+
+var showCurrent = function (city) {
+    var date = moment().format("M/D/YYYY")
+    var dateEl = document.getElementById("date")
+    dateEl.textContent = date
+    var today = document.getElementById("temp")
+    var temp = city.main.temp
+    today.textContent = temp
+
+}
+
+var btn = document.querySelector(".btn")
+btn.addEventListener("click", search)
