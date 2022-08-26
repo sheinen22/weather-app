@@ -46,11 +46,20 @@ var fiveDayWeather = function (city) {
 var showCurrent = function (city) {
     var date = moment().format("M/D/YYYY")
     var dateEl = document.getElementById("date")
-    dateEl.textContent = date
+    dateEl.textContent = city.name + " " + date
     var today = document.getElementById("temp")
-    var temp = city.main.temp
+    var temp = "Temp: " + city.main.temp + "F"
     today.textContent = temp
-
+    var icon = city.weather[0].icon
+    var iconEl = document.createElement("img")
+    iconEl.src = "http://openweathermap.org/img/w/"+ icon +".png"
+    var humid = document.getElementById("humidity")
+    humid.textContent = "Humidity: " + city.main.humidity + "%"
+    var wind = document.getElementById("windSpeed")
+    wind.textContent = "Wind Speed: " + city.wind.speed + "MPH"
+    var uv = document.getElementById("uvIndex")
+    uv.textContent = "UV Index: " + city.uvi
+    today.appendChild(iconEl)
 }
 
 var btn = document.querySelector(".btn")
