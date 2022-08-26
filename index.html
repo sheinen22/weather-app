@@ -13,9 +13,9 @@
         <h1>Weather Dashboard</h1>
     </header>
 
-    <main>
-        <div class="col-12">
-            <div class="searchBox">
+    <main class="row justify-space-between">
+        <div class="col-4">
+            <div>
                 <h2 class="card-header">Search for a City</h2>
                 <form class="searchBody">
                     <input name="cityName" type="text" class="userInput"/>
@@ -24,7 +24,7 @@
             </div>
             <div class="cities"></div>
         </div>
-        <div class="col-12" id="now">
+        <div class="col-4" id="now">
             <h3>Today's Weather:</h3>
                 <p id="date"></p>
                 <p id="temp"><img id="icon"></img></p>
@@ -32,7 +32,7 @@
                 <p id="windSpeed"></p>
                 <p id="uvIndex"></p>
             </div>
-            <div id="then">
+            <div class="col-4" id="then">
                 <h3>Upcoming Weather:</h3>
                 <p id="date1"></p>
                 <p id="temp1">
