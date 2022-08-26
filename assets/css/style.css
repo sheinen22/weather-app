@@ -1,0 +1,16 @@
+:root {
+    --primarybg: darkblue;
+    --primarytxt: white;
+
+}
+
+
+.topbg {
+    background-color: var(--primarybg);
+    text-align:center;
+    color: var(--primarytxt);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+

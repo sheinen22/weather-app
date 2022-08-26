@@ -9,6 +9,29 @@
     <title>Weather Forecast</title>
 </head>
 <body>
+    <header class="topbg">
+        <h1>Weather Dashboard</h1>
+    </header>
+
+    <main>
+        <div class="col-12">
+            <div class="searchBox">
+                <h2 class="card-header">Search for a City</h2>
+                <form class="searchBody">
+                    <input name="cityName" type="text" class="userInput"/>
+                    <button type="submit" class="btn">Search</button>
+                </form>
+            </div>
+            <div class="cities"></div>
+        </div>
+        <div class="col-12">
+            <div id="today">todays weather</div>
+            <div id="fivecast">
+                <h3>Upcoming Weather</h3>
+                <div>5cast here</div>
+            </div>
+        </div>
+    </main>
     
 </body>
 </html>
